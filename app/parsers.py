@@ -156,6 +156,8 @@ def shares(self, msg_data, create_config):
         share['free'] -= share_size_floor
 
         share_size_total = share['used'] + share['free']
+        if share_size_total == 0:
+            continue
         share_used_pct = math.ceil((share['used'] / (share_size_total) * 100))
 
         payload = {
