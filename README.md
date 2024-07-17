@@ -82,7 +82,7 @@ services:
       - TZ=Europe/Oslo
     volumes:
       - './data:/data'
-    image: ghcr.io/idmedia/hass-unraid:latest
+    image: ghcr.io/jakemartin-icl/hass-unraid:latest
 ```
 
 The container should now connect to your Unraid server(s) and automatically create an entry in Home Assistant. To verify navigate to Settings->Devices & Services->MQTT. If no device is created make sure to check the contains logs using `docker logs hass-unraid`.
